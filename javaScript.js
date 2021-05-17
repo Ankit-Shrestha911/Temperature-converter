@@ -6,9 +6,10 @@ function tempCalculator() {
     const temperature_Value = selector.options[choose.selectedIndex];
     const result = document.getElementById("result_Display");
 
-    result.innerText = "Loading...";
+  
     
     if (data.length != 0) {
+        result.innerText = "Loading...";
         if (temperature_Value.value === "celsius") {
             const feh = Math.round((data * 9 / 5) + 32);
         
