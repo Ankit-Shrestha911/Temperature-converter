@@ -97,6 +97,10 @@ h1{
 
 
 @media only screen and (max-width: 1025px ){
+    
+      body{
+        height: 80vh;
+    }
     .main-container{
         height: 400px;
         width: 700px;
@@ -180,6 +184,9 @@ h1{
 
  @media only screen and (max-width: 500px){
 
+      body{
+        height: 650px;
+    }
 
     .main-container
     {   width: 300px;
