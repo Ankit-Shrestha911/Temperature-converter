@@ -1,3 +1,5 @@
+const copyright = document.getElementById('copyright');
+
 function tempCalculator() {
     const data = document.getElementById('temp').value;
     const choose = document.getElementById("selector");
@@ -28,5 +30,16 @@ function tempCalculator() {
         alert("Please! Enter number");
     }
 
+    setTimeout(()=>{
+        copyright.innerHTML =  `&copy;Copyright 2021 Ankit Shrestha`;
+    },1100);
+    
 
+
+
+}
+
+function show(){
+    copyright.innerHTML="";
+    
 }
