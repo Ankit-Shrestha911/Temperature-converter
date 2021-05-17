@@ -1,6 +1,7 @@
 const copyright = document.getElementById('copyright');
 const header = document.getElementById('header');
 const responsive = window.matchMedia("(max-width: 700px)");
+const responsiveTab = window.matchMedia("(min-width: 901px) and (max-width: 1024px)");
 
 function tempCalculator() {
     const data = document.getElementById('temp').value;
@@ -14,18 +15,18 @@ function tempCalculator() {
         result.innerText = "Loading...";
         if (temperature_Value.value === "celsius") {
             const feh = Math.round((data * 9 / 5) + 32);
-        
-            setTimeout(()=>{
+
+            setTimeout(() => {
                 result.innerHTML = `= ${feh}°Fahrenheit`;
-            },1000);
-            
+            }, 1000);
+
         }
         else {
             const cel = Math.round((data - 32) * 5 / 9);
-            
-            setTimeout(()=>{
+
+            setTimeout(() => {
                 result.innerHTML = `= ${cel}°Celsius`;
-            },1000);
+            }, 1000);
 
         }
     }
@@ -34,21 +35,25 @@ function tempCalculator() {
         result.innerText = "";
     }
 
-    setTimeout(()=>{
-        copyright.innerHTML =  `&copy;Copyright 2021 Ankit Shrestha`;
-    },1100);
-    
+    setTimeout(() => {
+        copyright.innerHTML = `&copy;Copyright 2021 Ankit Shrestha`;
+    }, 1100);
+
 
 
 
 }
 
-function show(){
-    copyright.innerHTML="";
-    if(responsive.matches){
-        header.innerHTML="";
+function show() {
+    copyright.innerHTML = "";
+    if (responsive.matches) {
+        header.innerHTML = "";
+    }
+
+    if(responsiveTab.matches){
+        header.innerHTML = "";
     }
 
 
-    
 }
+
