@@ -28,6 +28,7 @@ function tempCalculator() {
     }
     else {
         alert("Please! Enter number");
+         result.innerText = "";
     }
 
     setTimeout(()=>{
